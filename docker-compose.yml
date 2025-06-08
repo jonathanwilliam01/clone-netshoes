@@ -17,6 +17,6 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: netshoes
       MYSQL_USER: netshoes
-      MYSQL_PASSWORD: ''
+      MYSQL_PASSWORD: netshoes
     ports:
       - "3306:3306"

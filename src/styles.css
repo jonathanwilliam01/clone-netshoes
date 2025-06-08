@@ -28,9 +28,57 @@ header {
   font-weight: bold;
 }
 
+.menu-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  height: 80px;
+}
+
+.menu-bar-opcoes{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 25%;
+}
+
+.menu-bar-categ{
+  height: 100%;
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  margin-left: 50px;
+}
+
+.bar-ul{
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+}
+
+.bar-li{
+  padding: 15px;
+  margin-left: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.bar-li:hover{
+  font-weight: bold;
+  cursor: pointer;
+}
+
 nav ul {
   list-style: none;
   display: flex;
+  cursor: pointer;
   gap: 20px;
 }
 
@@ -49,6 +97,7 @@ nav ul li a {
   justify-content: center;
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 .banner h1 {

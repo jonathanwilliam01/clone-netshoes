@@ -2,9 +2,6 @@
 
 include_once('conexao.php');
 
-$produtos = "select * from produtos";
-$sql_produtos = mysqli_query($mysqli,$produtos);
-
 ?>
 
 <!DOCTYPE html>
@@ -52,46 +49,35 @@ $sql_produtos = mysqli_query($mysqli,$produtos);
     </div>
   </section>
 
-  <section class="banner">
-    <img src="https://static.netshoes.com.br/bnn/l_netshoes/2025-06-03/1886_full1_desk_descontou_banner.png" style="width: 100%; height: 350px;">
-  </section>
-
-  <section class="categorias">
-    <h2>Categorias</h2>
-    <div class="grid-categorias">
-      <div class="categoria">Tênis</div>
-      <div class="categoria">Roupas</div>
-      <div class="categoria">Acessórios</div>
-      <div class="categoria">Esportes</div>
-    </div>
-  </section>
-
-  <section class="produtos">
-    <h2>Mais Vendidos</h2>
-    <div class="grid-produtos">
-
-      <?php
-      while($prods = $sql_produtos->fetch_assoc()){
-      ?>
-      <div class="produto">
-        <img src="<?php echo $prods['url_imagem'];?>" alt="Produto 1">
-        <h3>
-          <?php echo $prods['descricao'];?>
-        </h3>
-        <p>R$ <?php echo $prods['preco'];?></p>
-      </div>
-        <?php
-      }
-        ?>
-
-      <a href="novo_produto.php">
-        <button type="submit" name="novo_produto" style="width: 150px; height: 200px; cursor:pointer"> + Novo produto</button>
+       <a href="index.php">
+        <button name="voltar" style="width: 100px; height:50px; margin-bottom: 10px; margin-left: 10px;"> <-Voltar</button>
       </a>
 
-    </div>
+  <section class="cad-produto">
+
+    <form method="post">
+        <input type="text" name="descricao" placeholder="Descrição do produto">
+        <input type="number" name="valor" placeholder="Valor do produto">
+        <input type="text" name="url" placeholder="url da imagem do produto">
+        <input type="text" name="quantidade" placeholder="Quantidade do produto">
+        
+        <input type="submit" name="cadastrar" value="Cadastrar Produto">
+
+        <?php
+            if(isset($_POST['cadastrar'])){
+                $descricao = $_POST['descricao'];
+                $valor = $_POST['valor'];
+                $url = $_POST['url'];
+                $quantidade = $_POST['quantidade'];
+
+                $insere_prod = "insert into produtos(descricao, preco, quantidade, url_imagem) values ('$descricao', $valor, '$quantidade','$url')";
+                $sql_insere_prod = mysqli_query($mysqli,$insere_prod);
+            }
+        ?>
+    </form>
   </section>
 
-  <footer>
+   <footer>
     <p>&copy; 2025 Clone Netshoes - Projeto Educacional</p>
   </footer>
 </body>
