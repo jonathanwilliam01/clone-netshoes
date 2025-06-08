@@ -91,8 +91,8 @@ $sql_produtos = mysqli_query($mysqli,$produtos);
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Clone Netshoes - Projeto Educacional</p>
-  </footer>
+      <?php
+      include_once('footer.php')
+      ?>
 </body>
 </html>
