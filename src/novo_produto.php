@@ -78,7 +78,7 @@ include_once('conexao.php');
   </section>
 
    <?php
-      include_once('footer.php')
+      include_once('components/footer.php')
     ?>
 </body>
 </html>

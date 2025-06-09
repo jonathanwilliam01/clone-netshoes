@@ -16,6 +16,7 @@ $sql_produtos = mysqli_query($mysqli,$produtos);
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  
   <header>
     <div class="logo">NETSHOES</div>
     <div class="pesquisa">
@@ -92,7 +93,7 @@ $sql_produtos = mysqli_query($mysqli,$produtos);
   </section>
 
       <?php
-      include_once('footer.php')
+      include_once('./components/footer.php')
       ?>
 </body>
 </html>
