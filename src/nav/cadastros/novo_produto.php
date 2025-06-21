@@ -1,6 +1,6 @@
 <?php
 
-include_once('conexao.php');
+include_once('../../conexao.php');
 
 ?>
 
@@ -10,46 +10,19 @@ include_once('conexao.php');
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clone Netshoes</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">NETSHOES</div>
-    <div class="pesquisa">
-        <form method="post">
-            <input class="pesquisa" type="text" name="pesquisar" placeholder="O que você está procurando?">
-        </form>
-    </div>
-    <nav>
-      <ul>
-        <li>Fav</li>
-        <li>Entrar</li>
-        <li>Carr</li>
-      </ul>
-    </nav>
-  </header>
+  <main>
+    <?php
+        include_once('../../components/header.php')
+    ?>
 
-  <section class="menu-bar">
-    <div class="menu-bar-opcoes">
-      <ul class="bar-ul">
-        <li class="bar-li">Informe seu CEP</li>
-        <li class="bar-li">Todas as categorias</li>
-      </ul>
-    </div>
-    <div class="menu-bar-categ">
-      <ul class="bar-ul">
-        <li class="bar-li">CORRIDA</li>
-        <li class="bar-li">FUTEBOL</li>
-        <li class="bar-li">SPORTSYLE</li>
-        <li class="bar-li">FEMININO</li>
-        <li class="bar-li">BEM ESTAR</li>
-        <li class="bar-li">CUPONS</li>
-        <li class="bar-li">PARCEIRAS</li>
-      </ul>
-    </div>
-  </section>
+    <?php
+        include_once('../../components/menu-bar.php')
+    ?>
 
-       <a href="index.php">
+       <a href="../../index.php">
         <button name="voltar" style="width: 100px; height:50px; margin-bottom: 10px; margin-left: 10px;"> <-Voltar</button>
       </a>
 
@@ -76,9 +49,10 @@ include_once('conexao.php');
         ?>
     </form>
   </section>
+  </main>
 
    <?php
-      include_once('components/footer.php')
+      include_once('../../components/footer.php')
     ?>
 </body>
 </html>

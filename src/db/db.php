@@ -1,6 +1,6 @@
 <?php
 
-include_once('conexao.php');
+include_once('./conexao.php');
 
 $cria_tab_produtos = 
 "CREATE TABLE IF NOT EXISTS produtos (
