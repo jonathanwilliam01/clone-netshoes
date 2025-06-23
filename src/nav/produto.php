@@ -20,11 +20,22 @@ $sql_produtos = mysqli_query($mysqli,$produtos);
     <?php
         include_once('../components/header.php')
     ?>
+    <?php
+        include_once('../components/menu-bar.php')
+    ?>
 
 <section class="produtos">
   <?php while($prods = $sql_produtos->fetch_assoc()){ ?>
     <div class="infos">
         <h2><?php echo $prods['descricao']; ?></h2>
+        <p>Ref: 00.000.000.00.00000</p>
+        <h3>Classificação: </h3>
+        <p><b>Composição: </b></p>
+        <p>Indicado para:</p>
+        <p>Material:</p>
+        <p>Pisada:</p>
+        <p>Importante:</p>
+        <p>Garantia do Fabricante:</p>
     </div>
 
     <div class="imagens">
@@ -62,13 +73,11 @@ img{
 }
 
 .infos{
-    background-color: red;
-    width: 22%;
+    width: 10%;
     height: 100%;
 }
 
 .imagens{
-    background-color: blue;
     width: 58%;
     height: 100%;
     display: flex;
@@ -77,7 +86,6 @@ img{
 }
 
 .valores{
-    background-color: aqua;
     width: 22%;
     height: 100%;
 }
